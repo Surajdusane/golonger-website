@@ -2,18 +2,33 @@ import { Apple, Play } from "lucide-react";
 
 import { Logo } from "./header";
 
-const columns = [
+const columns: Array<{
+  title: string;
+  links: Array<{ label: string; href: string }>;
+}> = [
   {
     title: "Product",
-    links: ["Features", "Reviews", "What's new"],
+    links: [
+      { label: "Features", href: "/#features" },
+      { label: "Reviews", href: "/#reviews" },
+      { label: "What's new", href: "#" },
+    ],
   },
   {
     title: "Support",
-    links: ["Help center", "Contact us", "FAQ"],
+    links: [
+      { label: "Help center", href: "#" },
+      { label: "Contact us", href: "#" },
+      { label: "FAQ", href: "#" },
+    ],
   },
   {
     title: "Legal",
-    links: ["Privacy Policy", "Terms of Service", "Health disclaimer"],
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "#" },
+      { label: "Health disclaimer", href: "#" },
+    ],
   },
 ];
 
@@ -63,12 +78,12 @@ export function Footer() {
               </h3>
               <ul className="mt-4 space-y-3 text-sm">
                 {column.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-foreground/80 hover:text-foreground transition"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}

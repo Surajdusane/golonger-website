@@ -1,11 +1,13 @@
+import Link from "next/link";
+
 export function Logo() {
   return (
-    <a href="#top" className="flex items-center gap-2.5">
+    <Link href="/" className="flex items-center gap-2.5">
       <span className="w-8 h-8 rounded-full border-[3px] border-primary relative inline-block">
         <span className="absolute w-2.5 h-2.5 rounded-full bg-primary left-1 top-1" />
       </span>
       <span className="font-extrabold text-xl tracking-wide">GOLONGER</span>
-    </a>
+    </Link>
   );
 }
 

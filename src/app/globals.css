@@ -175,9 +175,29 @@
     letter-spacing: 1px;
   }
 
+  .page-title {
+    font-family: "BebasNeue-Regular", var(--font-heading), sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: 1px;
+  }
+
+  .section-heading {
+    font-family: "BebasNeue-Regular", var(--font-heading), sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
   @media (max-width: 767px) {
     .hero-title {
       font-size: 60px;
+    }
+
+    .page-title {
+      font-size: 44px;
     }
   }
 }
