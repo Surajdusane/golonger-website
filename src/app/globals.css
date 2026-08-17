@@ -127,6 +127,13 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
@@ -162,7 +169,7 @@
   /* Display type */
   .hero-title {
     font-family: "BebasNeue-Regular", var(--font-heading), sans-serif;
-    font-size: 130px;
+    font-size: 100px;
     font-weight: 700;
     line-height: 0.88;
     letter-spacing: 1px;
@@ -170,7 +177,7 @@
 
   @media (max-width: 767px) {
     .hero-title {
-      font-size: 72px;
+      font-size: 60px;
     }
   }
 }
