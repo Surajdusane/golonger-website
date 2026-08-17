@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   title: "Golonger — Pelvic Floor Training for Sexual Health & Wellness",
   description:
     "Go longer, feel stronger. Guided pelvic floor exercises for strength, flexibility, and sexual health. Five minutes a day, private by design.",
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: { url: "/favicon.ico" },
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

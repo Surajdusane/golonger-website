@@ -1,11 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
+
+import logo from "@/../public/logo.png";
 
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
-      <span className="w-8 h-8 rounded-full border-[3px] border-primary relative inline-block">
-        <span className="absolute w-2.5 h-2.5 rounded-full bg-primary left-1 top-1" />
-      </span>
+      <Image
+        src={logo}
+        alt="Golonger logo"
+        className="w-8 h-8 rounded-full object-cover"
+      />
       <span className="font-extrabold text-xl tracking-wide">GOLONGER</span>
     </Link>
   );
