@@ -9,7 +9,7 @@ export function Logo() {
       <Image
         src={logo}
         alt="Golonger logo"
-        className="w-8 h-8 rounded-full object-cover"
+        className="w-8 h-8 object-cover"
       />
       <span className="font-extrabold text-xl tracking-wide">GOLONGER</span>
     </Link>
