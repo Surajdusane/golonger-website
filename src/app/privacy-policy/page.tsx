@@ -6,7 +6,7 @@ import { Footer } from "@/components/landing/footer";
 import { Header } from "@/components/landing/header";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Golonger",
+  title: "Privacy Policy - Golonger",
   description:
     "How Golonger collects, uses, and protects your personal data.",
 };
@@ -115,7 +115,7 @@ export default function PrivacyPolicyPage() {
                     <strong className="text-foreground">
                       Data you provide directly:
                     </strong>{" "}
-                    any information you input while using the App — such as
+                    any information you input while using the App - such as
                     your name, email address, and details you share with our
                     support team.
                   </>,
@@ -218,7 +218,7 @@ export default function PrivacyPolicyPage() {
                   <>
                     <strong className="text-foreground">Consent:</strong> we
                     process sensitive personal data, including health data,
-                    based on your explicit consent — this consent is essential
+                    based on your explicit consent - this consent is essential
                     for enabling you to use the App.
                   </>,
                 ]}
@@ -259,7 +259,7 @@ export default function PrivacyPolicyPage() {
                       Service providers:
                     </strong>{" "}
                     providers of systems and services we use to host,
-                    administer, and maintain the App — including hosting
+                    administer, and maintain the App - including hosting
                     servers, email services, analytics, crash reporting, and
                     customer service tools.
                   </>,
@@ -293,27 +293,27 @@ export default function PrivacyPolicyPage() {
               <List
                 items={[
                   <>
-                    <strong className="text-foreground">Amplitude</strong> —
+                    <strong className="text-foreground">Amplitude</strong> -
                     analytics of user behavior and app usage.
                   </>,
                   <>
-                    <strong className="text-foreground">AppsFlyer</strong> —
+                    <strong className="text-foreground">AppsFlyer</strong> -
                     mobile attribution and marketing analytics.
                   </>,
                   <>
                     <strong className="text-foreground">
                       Firebase Analytics
                     </strong>{" "}
-                    — user interaction and performance analytics.
+                    - user interaction and performance analytics.
                   </>,
                   <>
                     <strong className="text-foreground">
                       Firebase Crashlytics
                     </strong>{" "}
-                    — crash reporting and stability monitoring.
+                    - crash reporting and stability monitoring.
                   </>,
                   <>
-                    <strong className="text-foreground">Apple Inc.</strong> —
+                    <strong className="text-foreground">Apple Inc.</strong> -
                     cloud storage and app services for iOS devices.
                   </>,
                 ]}

@@ -36,7 +36,7 @@ const features = [
     icon: BellRing,
     title: "Gentle reminders",
     description:
-      "Discreet nudges that build the habit — without breaking your focus.",
+      "Discreet nudges that build the habit - without breaking your focus.",
   },
   {
     icon: HeartPulse,
@@ -59,7 +59,7 @@ export function Features() {
             <span className="text-primary">YOUR LIFE</span>
           </h2>
           <p className="text-muted-foreground mt-5 text-lg">
-            Short, science-backed sessions designed around your day — not the
+            Short, science-backed sessions designed around your day - not the
             other way around.
           </p>
         </div>

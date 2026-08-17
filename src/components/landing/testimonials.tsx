@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 const reviews = [
   {
     quote:
-      "I never thought five minutes could change how I feel. Three weeks in and I'm stronger, more confident — and I notice it every day.",
+      "I never thought five minutes could change how I feel. Three weeks in and I'm stronger, more confident - and I notice it every day.",
     name: "Maya R.",
     meta: "Verified user · 34",
   },

@@ -30,7 +30,7 @@ export function Hero() {
 
             <p className="text-muted-foreground text-lg mt-4 max-w-md mx-auto lg:mx-0">
               Guided pelvic floor training for sexual health and wellness. Five
-              minutes a day — built into your routine.
+              minutes a day - built into your routine.
             </p>
 
             <a

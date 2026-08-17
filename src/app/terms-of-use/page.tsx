@@ -6,7 +6,7 @@ import { Footer } from "@/components/landing/footer";
 import { Header } from "@/components/landing/header";
 
 export const metadata: Metadata = {
-  title: "Terms of Use — Golonger",
+  title: "Terms of Use - Golonger",
   description:
     "The terms governing your use of the Golonger app for pelvic floor training.",
 };
@@ -272,9 +272,9 @@ export default function TermsOfUsePage() {
                 personal, non-commercial use.
               </Paragraph>
               <Paragraph>
-                All rights, title, and interest in and to the Platforms —
+                All rights, title, and interest in and to the Platforms -
                 including text, images, audio, video, software, code, visual
-                interfaces, graphics, and design — are exclusively reserved by
+                interfaces, graphics, and design - are exclusively reserved by
                 the Company. Any use of our software, title, trade name,
                 trademark, service mark, logo, or domain name requires prior
                 written permission from the Company.
@@ -419,7 +419,7 @@ export default function TermsOfUsePage() {
                 You can terminate these Terms by ceasing to use the Platforms.
                 If you purchased a subscription, you should also cancel it
                 directly. Note that uninstalling the App does not stop a
-                subscription automatically — you must cancel the automatic
+                subscription automatically - you must cancel the automatic
                 renewal in your app store account settings to avoid being
                 charged.
               </Paragraph>

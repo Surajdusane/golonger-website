@@ -94,7 +94,7 @@ export function Footer() {
 
         <div className="mt-14 pt-6 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-sm text-muted-foreground">
           <p>© 2026 Golonger. All rights reserved.</p>
-          <p>Strength, confidence, intimacy — trained daily.</p>
+          <p>Strength, confidence, intimacy - trained daily.</p>
         </div>
       </div>
     </footer>

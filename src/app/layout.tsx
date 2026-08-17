@@ -15,7 +15,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Golonger — Pelvic Floor Training for Sexual Health & Wellness",
+  title: "Golonger - Pelvic Floor Training for Sexual Health & Wellness",
   description:
     "Go longer, feel stronger. Guided pelvic floor exercises for strength, flexibility, and sexual health. Five minutes a day, private by design.",
   icons: {
