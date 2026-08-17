@@ -1,9 +1,6 @@
 I have initialized a new next js project, use next docs mcp and tailwind-4-docs. shadcn & web-design-guidelines skills for creating the website.
 
-create basic
-![alt text](image.png)
 
-same landing page on above image slowing
 this include this folowing pages
 - image like top section
 - features
