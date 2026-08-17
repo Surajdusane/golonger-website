@@ -1,5 +1,3 @@
-import { Flame } from "lucide-react";
-
 export function Logo() {
   return (
     <a href="#top" className="flex items-center gap-2.5">
@@ -35,21 +33,5 @@ export function Header() {
         Get the app
       </a>
     </header>
-  );
-}
-
-export function StreakBadge() {
-  return (
-    <div className="bg-card border border-border rounded-2xl px-4 py-3 flex items-center gap-3 shadow-[0_20px_50px_rgba(0,0,0,.5)]">
-      <span className="w-9 h-9 rounded-xl bg-gold/15 flex items-center justify-center">
-        <Flame className="size-4 text-gold" />
-      </span>
-      <div>
-        <div className="text-sm font-bold leading-none">12-day streak</div>
-        <div className="text-[10px] text-muted-foreground mt-1">
-          Best week yet
-        </div>
-      </div>
-    </div>
   );
 }
