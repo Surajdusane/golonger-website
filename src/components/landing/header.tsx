@@ -35,7 +35,7 @@ export function Header() {
 
       <a
         href="#download"
-        className="hidden md:block border border-border rounded-xl px-6 py-3 text-sm hover:bg-white/5 transition"
+        className="border border-border rounded-xl px-4 md:px-6 py-2.5 md:py-3 text-sm hover:bg-white/5 transition"
       >
         Get the app
       </a>

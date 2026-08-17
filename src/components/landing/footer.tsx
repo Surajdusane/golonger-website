@@ -43,7 +43,7 @@ export function Footer() {
               Guided pelvic floor training for strength, flexibility, and
               sexual health and wellness.
             </p>
-            <div className="flex gap-3 mt-6">
+            <div className="flex flex-wrap gap-3 mt-6">
               <a
                 href="#"
                 className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-3 hover:bg-white/5 transition"
