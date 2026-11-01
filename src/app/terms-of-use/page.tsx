@@ -66,7 +66,7 @@ export default function TermsOfUsePage() {
             </p>
             <h1 className="page-title mt-3">TERMS OF USE</h1>
             <p className="text-muted-foreground mt-4 text-xs tracking-[.25em]">
-              EFFECTIVE AS OF: AUGUST 17, 2026
+              EFFECTIVE AS OF: SEPTEMBER 11, 2026
             </p>
           </div>
         </div>
@@ -84,13 +84,13 @@ export default function TermsOfUsePage() {
           <div className="mt-8">
             <PolicySection title="About us">
               <Paragraph>
-                These terms of use (&ldquo;Terms&rdquo; or
-                &ldquo;Agreement&rdquo;) constitute a legally binding agreement
-                between you and Golonger (the &ldquo;Company&rdquo;) regarding
-                your use of the Golonger mobile app for guided pelvic floor
-                exercises (the &ldquo;App&rdquo;), along with any related
-                documentation and services (together, the
-                &ldquo;Platforms&rdquo;).
+                Welcome to Golonger. These terms of use (&ldquo;Terms&rdquo;
+                or &ldquo;Agreement&rdquo;) constitute a legally binding
+                agreement between you and Golonger (the
+                &ldquo;Company&rdquo;) regarding your use of the Golonger
+                mobile app for guided pelvic floor exercises (the
+                &ldquo;App&rdquo;), along with any related documentation and
+                services (together, the &ldquo;Platforms&rdquo;).
               </Paragraph>
               <Paragraph>
                 Access to and use of the Platforms is expressly conditioned
@@ -111,73 +111,14 @@ export default function TermsOfUsePage() {
                   YOU MAY NOT ACCESS OR USE THE PLATFORMS.
                 </strong>
               </Paragraph>
-              <Paragraph>
-                The Platforms are not intended for children under the age of
-                13 (or such higher age as required by applicable law). We do
-                not knowingly collect or solicit personal data from children.
-                If we learn that we have inadvertently gathered personal data
-                from a child, we will take reasonable measures to promptly
-                erase such information from our records.
-              </Paragraph>
             </PolicySection>
 
-            <PolicySection title="Registration">
+            <PolicySection title="Use of the app">
               <Paragraph>
-                To make full use of the Platforms, you may be required to
-                register for an account (&ldquo;Account&rdquo;). You
-                acknowledge and agree that the information you provide is
-                true, accurate, and correct. You are responsible for keeping
-                your login details confidential and secure. Sharing your login
-                details with any other person is strictly prohibited.
+                Golonger helps you build pelvic floor strength, flexibility,
+                and control through short, guided daily sessions. Access to
+                core functionality requires an active subscription.
               </Paragraph>
-              <Paragraph>
-                You must notify us immediately if you suspect unauthorized use
-                of your login details or any breach of security by contacting
-                us at <EmailLink />. We reserve the right to disable your
-                Account and suspend your access if, in our reasonable opinion,
-                you have breached any provision of these Terms.
-              </Paragraph>
-            </PolicySection>
-
-            <PolicySection title="Subscriptions">
-              <Paragraph>
-                We may offer a free or paid trial subscription for the use of
-                the Platforms. Unless you cancel at least 24 hours before the
-                end of the trial, you will be automatically charged the price
-                indicated on the payment screen for the chosen subscription
-                period. The subscription renews automatically for the same
-                period at the end of each subscription period, at the cost of
-                the chosen plan.
-              </Paragraph>
-              <Paragraph>
-                Payment is processed by the app store from which you
-                downloaded the App (Apple App Store or Google Play) or by the
-                payment method you submitted at the time of purchase. Payment
-                will be charged to the payment method you submitted at the
-                confirmation of purchase, or after the end of the trial
-                period. You authorize us to charge the applicable subscription
-                fees to the payment method that you use.
-              </Paragraph>
-              <Paragraph>
-                <strong className="text-foreground">Refunds:</strong> if you
-                purchased a subscription or enabled a trial through the App
-                Store or Google Play, refund requests must be submitted
-                directly to the respective store. Generally, payments made
-                directly to us are non-refundable, except where you have
-                statutory refund rights or a confirmed bug prevents you from
-                using the App properly.
-              </Paragraph>
-              <Paragraph>
-                <strong className="text-foreground">Disputes:</strong> if a
-                payment is declined, charged back, or rejected, this will be
-                considered a breach of your payment obligations and your use
-                of the Platforms may be automatically disabled or terminated.
-                We encourage you to contact our support team before submitting
-                any dispute or reversal of payment.
-              </Paragraph>
-            </PolicySection>
-
-            <PolicySection title="Your use of the platforms">
               <Paragraph>
                 In return for your agreeing to comply with these Terms, you
                 may:
@@ -206,12 +147,100 @@ export default function TermsOfUsePage() {
                 regulations.
               </Paragraph>
               <Paragraph>
-                The App is intended for general wellness purposes. It does not
-                provide medical advice, diagnosis, or treatment. Always
-                consult a qualified healthcare professional regarding any
-                medical condition or before starting a new exercise program.
-                If you experience pain or discomfort, stop and seek medical
-                advice.
+                You may only use the App for its intended purpose. Any misuse,
+                including attempts to bypass or manipulate its features, is
+                prohibited.
+              </Paragraph>
+            </PolicySection>
+
+            <PolicySection title="No account required">
+              <Paragraph>
+                You are not required to create an account to use Golonger. We
+                do not offer user registration or login, and we do not
+                collect or store personal data like your name or email address
+                on our own servers.
+              </Paragraph>
+              <Paragraph>
+                Your exercise history, progress, and preferences are stored
+                locally on your device only. Uninstalling the App permanently
+                deletes this locally stored data, and it cannot be restored.
+              </Paragraph>
+            </PolicySection>
+
+            <PolicySection title="Subscriptions & payments">
+              <Paragraph>
+                The App is free to download, but a paid subscription is
+                required to access key features. We may offer a free trial
+                period. Unless you cancel at least 24 hours before the end of
+                the trial, you will be automatically charged the price
+                indicated on the payment screen for the chosen subscription
+                period. The subscription renews automatically for the same
+                period unless cancelled.
+              </Paragraph>
+              <Paragraph>
+                Payments are processed by the app store from which you
+                downloaded the App (Apple App Store or Google Play), with
+                subscription management handled via RevenueCat. Payment will
+                be charged to the payment method linked to your store account
+                at confirmation of purchase, or after the end of the trial
+                period.
+              </Paragraph>
+              <Paragraph>
+                <strong className="text-foreground">Refunds:</strong> all
+                purchases are final. We do not offer refunds, except as
+                required by applicable law or the store&apos;s own policies.
+                If you purchased through the App Store or Google Play, refund
+                requests must be submitted directly to the respective store.
+              </Paragraph>
+              <Paragraph>
+                <strong className="text-foreground">Disputes:</strong> if a
+                payment is declined, charged back, or rejected, this will be
+                considered a breach of your payment obligations and your use
+                of the Platforms may be automatically disabled or terminated.
+                We encourage you to contact our support team before submitting
+                any dispute or reversal of payment.
+              </Paragraph>
+              <Paragraph>
+                Note that uninstalling the App does not stop a subscription
+                automatically — you must cancel the automatic renewal in your
+                app store account settings to avoid being charged.
+              </Paragraph>
+            </PolicySection>
+
+            <PolicySection title="Third-party services">
+              <Paragraph>
+                We use trusted third-party providers to operate the App.
+                Payment and subscription data and anonymized analytics are
+                processed by these providers according to their own privacy
+                practices — never sold or shared for advertising:
+              </Paragraph>
+              <List
+                items={[
+                  <>
+                    <strong className="text-foreground">RevenueCat</strong> —
+                    subscription handling, purchase validation, and
+                    entitlement management.
+                  </>,
+                  <>
+                    <strong className="text-foreground">
+                      PostHog (Cloud)
+                    </strong>{" "}
+                    — anonymized product analytics related to app usage and
+                    behavior.
+                  </>,
+                  <>
+                    <strong className="text-foreground">
+                      Apple App Store &amp; Google Play
+                    </strong>{" "}
+                    — payments, purchase history, and store-provided
+                    diagnostics.
+                  </>,
+                ]}
+              />
+              <Paragraph>
+                No personally identifiable information is stored on our own
+                external servers, as we operate none. Data is never sold or
+                shared with third parties for advertising.
               </Paragraph>
             </PolicySection>
 
@@ -223,28 +252,19 @@ export default function TermsOfUsePage() {
               </Paragraph>
               <List
                 items={[
-                  <>copy, adapt, alter, modify, or translate the Platforms;</>,
+                  <>use the App for any unlawful or unintended purpose;</>,
                   <>
-                    reverse engineer, decompile, or disassemble the
-                    Platforms, or create derivative works based on them, except
-                    to the extent permitted by applicable law;
+                    reverse engineer, decompile, or disassemble the Platforms,
+                    tamper with, or attempt to circumvent its core functions,
+                    except to the extent permitted by applicable law;
                   </>,
                   <>
                     distribute, sublicense, sell, rent, lease, or otherwise
                     transfer the Platforms or your right to use them;
                   </>,
                   <>
-                    use or distribute unauthorized software programs or tools,
-                    such as &ldquo;auto&rdquo; programs, macros, or cheating
-                    utilities;
-                  </>,
-                  <>
                     use any robot, spider, or other automated device to access
                     the Platforms or copy any material;
-                  </>,
-                  <>
-                    use the Platforms for any commercial purpose or
-                    revenue-generating endeavor;
                   </>,
                   <>
                     publish or upload any unlawful, harmful, defamatory,
@@ -256,9 +276,16 @@ export default function TermsOfUsePage() {
                     other proprietary notices belonging to us or third parties;
                     or
                   </>,
-                  <>do anything that may cause damage to the Platforms.</>,
+                  <>
+                    exploit bugs or errors in the App, or do anything that may
+                    cause damage to the Platforms.
+                  </>,
                 ]}
               />
+              <Paragraph>
+                We reserve the right to restrict access if the App is used in
+                ways that violate these Terms or compromise its functionality.
+              </Paragraph>
             </PolicySection>
 
             <PolicySection title="Limited license">
@@ -278,6 +305,37 @@ export default function TermsOfUsePage() {
                 the Company. Any use of our software, title, trade name,
                 trademark, service mark, logo, or domain name requires prior
                 written permission from the Company.
+              </Paragraph>
+            </PolicySection>
+
+            <PolicySection title="Age requirement">
+              <Paragraph>
+                Golonger is a sexual health and wellness app intended for
+                adults aged 18 and older. It is not directed at children, and
+                we do not knowingly collect personal data from children under
+                the age of 13. If we learn that we have inadvertently gathered
+                such data, we will take reasonable measures to promptly erase
+                it.
+              </Paragraph>
+              <Paragraph>
+                Parents and guardians are responsible for supervising any use
+                by minors.
+              </Paragraph>
+            </PolicySection>
+
+            <PolicySection title="Health disclaimer">
+              <Paragraph>
+                The App is intended for general wellness purposes only. It
+                does not provide medical advice, diagnosis, or treatment. All
+                training plans are educational and inspirational in nature and
+                are not a substitute for professional medical or therapeutic
+                advice.
+              </Paragraph>
+              <Paragraph>
+                Always consult a qualified healthcare professional regarding
+                any medical condition or before starting a new exercise
+                program. If you experience pain or discomfort, stop and seek
+                medical advice.
               </Paragraph>
             </PolicySection>
 
@@ -302,17 +360,17 @@ export default function TermsOfUsePage() {
 
             <PolicySection title="Limitation of liability">
               <Paragraph>
-                UNDER NO CIRCUMSTANCES SHALL THE COMPANY BE LIABLE FOR ANY
-                INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY, OR
-                PUNITIVE DAMAGES ARISING FROM THE USE OR MISUSE OF THE
-                PLATFORMS, INCLUDING LOSS OF USE, PROFITS, OR DATA, REGARDLESS
-                OF WHETHER THE CLAIM IS BASED ON CONTRACT, TORT, EQUITY, OR
-                OTHER LEGAL THEORIES. THE TOTAL LIABILITY OF THE COMPANY UNDER
-                THESE TERMS OR RELATED TO THE USE OF THE PLATFORMS SHALL NOT
-                EXCEED THE AMOUNTS PAID BY YOU FOR THE PLATFORMS, OR ONE
-                HUNDRED DOLLARS ($100) IF NO PAYMENT OBLIGATIONS EXIST. THIS
-                AGREEMENT DOES NOT INTEND TO EXCLUDE OR LIMIT OUR LIABILITY
-                WHERE IT WOULD BE UNLAWFUL TO DO SO.
+                TO THE FULLEST EXTENT PERMITTED BY LAW, THE COMPANY SHALL NOT
+                BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL,
+                CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES ARISING FROM THE
+                USE OR MISUSE OF THE PLATFORMS, INCLUDING LOSS OF USE,
+                PROFITS, OR DATA, REGARDLESS OF WHETHER THE CLAIM IS BASED ON
+                CONTRACT, TORT, EQUITY, OR OTHER LEGAL THEORIES. THE TOTAL
+                LIABILITY OF THE COMPANY UNDER THESE TERMS OR RELATED TO THE
+                USE OF THE PLATFORMS SHALL NOT EXCEED THE AMOUNTS PAID BY YOU
+                FOR THE PLATFORMS, OR ONE HUNDRED DOLLARS ($100) IF NO PAYMENT
+                OBLIGATIONS EXIST. THIS AGREEMENT DOES NOT INTEND TO EXCLUDE
+                OR LIMIT OUR LIABILITY WHERE IT WOULD BE UNLAWFUL TO DO SO.
               </Paragraph>
             </PolicySection>
 
@@ -331,38 +389,26 @@ export default function TermsOfUsePage() {
 
             <PolicySection title="Your privacy">
               <Paragraph>
-                All personal data that we process in connection with your use
-                of the Platforms is collected, stored, used, and disclosed
-                following our{" "}
+                All data processed in connection with your use of the
+                Platforms is handled following our{" "}
                 <Link
                   href="/privacy-policy"
                   className="text-primary hover:underline"
                 >
                   Privacy Policy
                 </Link>
-                , which describes the information we collect, how we use it,
-                and the rights you have over it.
+                . We do not require accounts and store no personal data on our
+                own servers; subscription and anonymized analytics data is
+                processed only by the third-party providers described in that
+                policy.
               </Paragraph>
             </PolicySection>
 
             <PolicySection title="Support">
               <Paragraph>
                 If you have any concerns regarding the Platforms, please
-                contact us at <EmailLink />. If we need to contact you, we
-                will do so by email using the contact details you have
-                provided. Providing a valid email address is your sole
-                responsibility. We do not guarantee that access to the
-                Platforms will always be available or uninterrupted.
-              </Paragraph>
-            </PolicySection>
-
-            <PolicySection title="Advertising and monetization">
-              <Paragraph>
-                You acknowledge that the Platforms may be supported by
-                advertising revenue, and we may place advertising, promotions,
-                or sponsored content in the App. The manner, mode, and extent
-                of such advertising is subject to change without notice to
-                you.
+                contact us at <EmailLink />. We do not guarantee that access
+                to the Platforms will always be available or uninterrupted.
               </Paragraph>
             </PolicySection>
 
@@ -379,28 +425,13 @@ export default function TermsOfUsePage() {
 
             <PolicySection title="Changes to these terms">
               <Paragraph>
-                These Terms may be modified with our prior written consent.
-                We may alter or amend these Terms, including introducing new
-                terms, as a result of a change in applicable law or our
-                business, where necessary for the provision of the Platforms,
-                or as a result of any improvements to the Platforms. If we
-                make changes, we will give advance written notice to you via
-                electronic communication within the App.
-              </Paragraph>
-            </PolicySection>
-
-            <PolicySection title="Copyright and takedown">
-              <Paragraph>
-                If you believe that your content has been copied in a way
-                that constitutes copyright infringement, you may submit a
-                Digital Millennium Copyright Act (&ldquo;DMCA&rdquo;)
-                notification to us at <EmailLink />. Your notice must be in
-                writing and include a description of the copyrighted work, the
-                location of the allegedly infringing material, a statement of
-                good-faith belief, and your electronic or physical signature.
-                We will take appropriate action under the DMCA and other
-                intellectual property laws. We may terminate the access of
-                users who are repeat infringers.
+                We may update these Terms from time to time as a result of a
+                change in applicable law or our business, where necessary for
+                the provision of the Platforms, or as a result of any
+                improvements to the Platforms. If we make changes, we will
+                update the &ldquo;Effective as of&rdquo; date at the top of
+                this page. Continued use of the App after changes go into
+                effect constitutes your acceptance of the revised Terms.
               </Paragraph>
             </PolicySection>
 
@@ -411,17 +442,15 @@ export default function TermsOfUsePage() {
                 terminated. We may terminate or suspend your use of the
                 Platforms immediately by written notice if we consider that
                 you have used the Platforms in violation of these Terms, if we
-                believe there has been unauthorized access, if we decide to
-                withdraw the Platforms, if required by law, or if you request
-                the deletion of your Account and personal data.
+                decide to withdraw the Platforms, or if required by law.
               </Paragraph>
               <Paragraph>
                 You can terminate these Terms by ceasing to use the Platforms.
                 If you purchased a subscription, you should also cancel it
-                directly. Note that uninstalling the App does not stop a
-                subscription automatically - you must cancel the automatic
-                renewal in your app store account settings to avoid being
-                charged.
+                directly in your app store account settings. Note that
+                uninstalling the App does not stop a subscription
+                automatically - you must cancel the automatic renewal to avoid
+                being charged.
               </Paragraph>
             </PolicySection>
 
@@ -458,6 +487,13 @@ export default function TermsOfUsePage() {
                 to enforce any provision thereof. We may transfer our rights
                 and obligations under these Terms to another company; we will
                 always tell you in writing if this happens.
+              </Paragraph>
+            </PolicySection>
+
+            <PolicySection title="Contact">
+              <Paragraph>
+                If you have any questions about these Terms, please contact us
+                at: <EmailLink />
               </Paragraph>
             </PolicySection>
           </div>
