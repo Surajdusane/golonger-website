@@ -1,9 +1,9 @@
 import {
   BellRing,
   Dumbbell,
-  HeartPulse,
+  ListChecks,
   Lock,
-  ShieldCheck,
+  PlayCircle,
   TrendingUp,
 } from "lucide-react";
 
@@ -11,38 +11,34 @@ const features = [
   {
     icon: Dumbbell,
     title: "Guided daily sessions",
-    description:
-      "Five-minute routines that adapt to your strength, your schedule, and your goals.",
+    description: "Short guided routines you can follow at your own pace.",
   },
   {
     icon: TrendingUp,
-    title: "Progress you can see",
-    description:
-      "Track reps, holds, and milestones as your pelvic floor gets stronger week by week.",
+    title: "Session history",
+    description: "See your completed sessions and streaks in one place.",
   },
   {
-    icon: ShieldCheck,
-    title: "Science-backed",
-    description:
-      "Exercises grounded in pelvic floor physiotherapy, explained in plain language.",
+    icon: ListChecks,
+    title: "Structured sessions",
+    description: "Clear on-screen timing and instructions.",
   },
   {
     icon: Lock,
-    title: "Private by design",
+    title: "No account required",
     description:
-      "Your health data stays on your device. No accounts, no sharing, no ads.",
+      "Your exercise history is stored on your device.",
   },
   {
     icon: BellRing,
     title: "Gentle reminders",
     description:
-      "Discreet nudges that build the habit - without breaking your focus.",
+      "Optional reminders to help you keep a routine.",
   },
   {
-    icon: HeartPulse,
-    title: "Confidence, restored",
-    description:
-      "Better strength and control support your wellness and your relationships.",
+    icon: PlayCircle,
+    title: "Follow-along video",
+    description: "Clear demonstrations with timers and cues.",
   },
 ];
 
@@ -55,12 +51,11 @@ export function Features() {
             WHY GOLONGER
           </p>
           <h2 className="hero-title text-6xl md:text-7xl mt-4">
-            TRAINING THAT FITS{" "}
-            <span className="text-primary">YOUR LIFE</span>
+            SESSIONS THAT FIT{" "}
+            <span className="text-primary">YOUR DAY</span>
           </h2>
           <p className="text-muted-foreground mt-5 text-lg">
-            Short, science-backed sessions designed around your day - not the
-            other way around.
+            Short guided sessions you can do at home.
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/provider";
+import { siteConfig } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,10 +15,15 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
 });
 
+const title = "Golonger - Guided Pelvic Floor Exercise App";
+const description =
+  "Guided pelvic floor exercise sessions with video, timers, and reminders. No account required.";
+
 export const metadata: Metadata = {
-  title: "Golonger - Pelvic Floor Training for Sexual Health & Wellness",
-  description:
-    "Go longer, feel stronger. Guided pelvic floor exercises for strength, flexibility, and sexual health. Five minutes a day, private by design.",
+  metadataBase: new URL(siteConfig.url),
+  title,
+  description,
+  applicationName: siteConfig.name,
   icons: {
     icon: [
       { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
@@ -27,6 +33,31 @@ export const metadata: Metadata = {
     apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title,
+    description,
+    images: [
+      {
+        url: "/web-app-manifest-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Golonger app icon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+    images: ["/web-app-manifest-512x512.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

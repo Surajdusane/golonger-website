@@ -1,4 +1,4 @@
-# GoLonger — Final Website Fix Plan
+# GoLonger - Final Website Fix Plan
 
 **App:** GoLonger
 **Bundle ID:** `com.greystone.golonger`
@@ -50,11 +50,11 @@ A reviewer who taps Contact, Help, FAQ, or Health Disclaimer gets a 404 or an in
 
 | # | Decision | Recommended default |
 |---|---|---|
-| 1 | Support email | Keep **`hello@golonger.app`** — already used in both legal pages. Only switch to `support@` if the mailbox exists. |
+| 1 | Support email | Keep **`hello@golonger.app`** - already used in both legal pages. Only switch to `support@` if the mailbox exists. |
 | 2 | Company block on Contact | `Golonger` + real country / legal entity. |
 | 3 | Copy posture | **Neutral fitness language**: “guided pelvic floor exercise sessions.” No outcomes, no sexual-performance promises. |
 | 4 | Store links | If there is no live listing, **remove both badges** and the fake download CTA. |
-| 5 | Response promise | “Usually within two business days” — only if you can honour it. |
+| 5 | Response promise | “Usually within two business days” - only if you can honour it. |
 | 6 | Privacy/Terms edits | **Include them.** The current policy contradicts the new analytics opt-in and claims no cross-border transfer. |
 
 > **Alignment risk:** the website can be made neutral, but the app still contains an “erectile” onboarding goal, and the name/mascot remain suggestive. Apple compares the site to the app. Website-only fixes reduce risk; they do not remove the 1.4.1 / 2.3.6 / 2.3.8 exposure.
@@ -65,10 +65,10 @@ A reviewer who taps Contact, Help, FAQ, or Health Disclaimer gets a 404 or an in
 
 **Files**
 
-- `src/app/page.tsx` — remove `<Testimonials />` and its import.
+- `src/app/page.tsx` - remove `<Testimonials />` and its import.
 - Delete `src/components/landing/testimonials.tsx`.
-- `src/components/landing/header.tsx` — remove the “Reviews” nav item.
-- `src/components/landing/footer.tsx` — remove the “Reviews” link from Product.
+- `src/components/landing/header.tsx` - remove the “Reviews” nav item.
+- `src/components/landing/footer.tsx` - remove the “Reviews” link from Product.
 
 **Replace with** a short, factual **“How it works”** section so the page does not look empty:
 
@@ -94,7 +94,7 @@ Replace promotional claims with factual feature descriptions.
 
 | Location | Current | Replace with |
 |---|---|---|
-| `layout.tsx` title | “Pelvic Floor Training for Sexual Health & Wellness” | “Golonger — Guided Pelvic Floor Exercise App” |
+| `layout.tsx` title | “Pelvic Floor Training for Sexual Health & Wellness” | “Golonger - Guided Pelvic Floor Exercise App” |
 | `layout.tsx` description | “Go longer, feel stronger… strength, flexibility, and sexual health.” | “Guided pelvic floor exercise sessions with video, timers, and reminders. No account required.” |
 | `hero.tsx` H1 | “GO LONGER / STRONGER / INSIDE OUT” | “GUIDED / PELVIC FLOOR / TRAINING” |
 | `hero.tsx` body | “Guided pelvic floor training for sexual health and wellness. Five minutes a day…” | “Short, guided pelvic floor exercise sessions you can follow at home. No account required.” |
@@ -102,7 +102,7 @@ Replace promotional claims with factual feature descriptions.
 | `features.tsx` | “Track reps, holds, and milestones as your pelvic floor gets stronger week by week.” | “See your completed sessions and streaks in one place.” |
 | `features.tsx` | “Science-backed / grounded in pelvic floor physiotherapy” | “Structured sessions / clear on-screen timing and instructions.” |
 | `features.tsx` | “Your health data stays on your device. No accounts, no sharing, no ads.” | “No account required. Your exercise history is stored on your device.” |
-| `features.tsx` | “Confidence, restored / Better strength and control support your wellness and your relationships.” | “Follow-along video — clear demonstrations with timers and cues.” |
+| `features.tsx` | “Confidence, restored / Better strength and control support your wellness and your relationships.” | “Follow-along video - clear demonstrations with timers and cues.” |
 | `features.tsx` intro | “Short, science-backed sessions…” | “Short guided sessions you can do at home.” |
 | `footer.tsx` | “Guided pelvic floor training for strength, flexibility, and sexual health and wellness.” | “Guided pelvic floor exercise sessions. No account required.” |
 | `footer.tsx` | “Strength, confidence, intimacy - trained daily.” | “Guided pelvic floor training, in your pocket.” |
@@ -132,7 +132,7 @@ Only intentional disclaimer text should remain (e.g. “does not provide medical
 Modeled on the calm, text-first structure of `https://thejcbsnbrand.com/contact`.
 
 **New file:** `src/app/contact/page.tsx`
-**Metadata:** title `Contact — Golonger`; description `Contact Golonger support by email.`
+**Metadata:** title `Contact - Golonger`; description `Contact Golonger support by email.`
 
 **Layout**
 
@@ -156,10 +156,10 @@ Modeled on the calm, text-first structure of `https://thejcbsnbrand.com/contact`
 >
 > **What to write about**
 >
-> - **App support** — bugs or questions about the app. Please include your app version, device model, and iOS version.
-> - **Subscriptions and billing** — restore purchases, billing questions, and cancellation. App Store refunds are handled by Apple.
-> - **Privacy and data** — deletion requests and analytics questions.
-> - **Legal** — questions about our Privacy Policy, Terms of Use, or Health Disclaimer.
+> - **App support** - bugs or questions about the app. Please include your app version, device model, and iOS version.
+> - **Subscriptions and billing** - restore purchases, billing questions, and cancellation. App Store refunds are handled by Apple.
+> - **Privacy and data** - deletion requests and analytics questions.
+> - **Legal** - questions about our Privacy Policy, Terms of Use, or Health Disclaimer.
 >
 > **Company**
 >
@@ -172,7 +172,7 @@ Modeled on the calm, text-first structure of `https://thejcbsnbrand.com/contact`
 
 - No contact form. A static export has no backend, and a broken form is worse than none.
 - Use a real `mailto:` with a subject: `mailto:hello@golonger.app?subject=Golonger%20support`.
-- The email text itself is the link — accessible and familiar to reviewers.
+- The email text itself is the link - accessible and familiar to reviewers.
 - Add `Contact` to the header nav.
 - Add `contact` to the footer Support column.
 - Set the App Store **Support URL** to `https://golonger.app/contact` (or `/support`).
@@ -181,7 +181,7 @@ Modeled on the calm, text-first structure of `https://thejcbsnbrand.com/contact`
 
 ## 5. Publish Help, FAQ, and Health Disclaimer pages
 
-### 5.1 `/support` — Help centre
+### 5.1 `/support` - Help centre
 
 Short FAQ, no health claims:
 
@@ -252,7 +252,7 @@ Returns zero. Every internal href resolves to a route that exists in `out/`.
 
 ### Privacy Policy
 
-- Change “anonymized” to “pseudonymous identifiers and usage events” — PostHog uses a persistent distinct ID.
+- Change “anonymized” to “pseudonymous identifiers and usage events” - PostHog uses a persistent distinct ID.
 - Add **Analytics choices**: analytics is opt-in; can be turned off in Settings → Share Analytics; consent can be withdrawn; ID reset via Delete All Data.
 - Add **Delete All Data** description: clears AsyncStorage, deletes SQLite, resets PostHog ID and consent.
 - Add **Retention**: local data until deleted; PostHog and RevenueCat per their policies.
@@ -344,13 +344,13 @@ Run in this order:
 
 These remain submission blockers and are not fixed by the website:
 
-1. Flatten the app icon to RGB with no alpha — C-04.
-2. Add an in-app health disclaimer and “consult a doctor” notice — H-01.
-3. Decide how App Review gets past the hard paywall and write review notes — H-05 / V-15.
-4. Update App Privacy labels and `PrivacyInfo.xcprivacy` — V-04.
-5. Exclude exercise/health data from iCloud backup — H-08.
-6. Obtain media licences and model releases — H-09.
-7. Answer the age-rating questionnaire honestly and review the name/icon positioning — H-03 / V-07.
+1. Flatten the app icon to RGB with no alpha - C-04.
+2. Add an in-app health disclaimer and “consult a doctor” notice - H-01.
+3. Decide how App Review gets past the hard paywall and write review notes - H-05 / V-15.
+4. Update App Privacy labels and `PrivacyInfo.xcprivacy` - V-04.
+5. Exclude exercise/health data from iCloud backup - H-08.
+6. Obtain media licences and model releases - H-09.
+7. Answer the age-rating questionnaire honestly and review the name/icon positioning - H-03 / V-07.
 8. Sandbox-test purchase, restore, delayed entitlement, cancellation, offline launch, and clean-install links.
 
 ---

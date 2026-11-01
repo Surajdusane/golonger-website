@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import heroImage from "@/../public/hero-image.png";
+import { siteConfig } from "@/lib/site";
 import { Header } from "./header";
 
 export function Hero() {
@@ -21,24 +22,38 @@ export function Hero() {
 
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <h1 className="hero-title">
-              GO LONGER
+              GUIDED
               <br />
-              STRONGER
+              PELVIC FLOOR
               <br />
-              <span className="text-primary">INSIDE OUT</span>
+              <span className="text-primary">TRAINING</span>
             </h1>
 
             <p className="text-muted-foreground text-lg mt-4 max-w-md mx-auto lg:mx-0">
-              Guided pelvic floor training for sexual health and wellness. Five
-              minutes a day - built into your routine.
+              Short, guided pelvic floor exercise sessions you can follow at
+              home. No account required.
             </p>
 
-            <a
-              href="#download"
-              className="mt-7 w-full sm:w-auto inline-block border-2 border-primary rounded-xl px-10 py-4 font-bold hover:bg-primary transition text-center"
-            >
-              DOWNLOAD NOW
-            </a>
+            {siteConfig.appStoreUrl ? (
+              <a
+                href={siteConfig.appStoreUrl}
+                className="mt-7 w-full sm:w-auto inline-block border-2 border-primary rounded-xl px-10 py-4 font-bold hover:bg-primary transition text-center"
+              >
+                DOWNLOAD NOW
+              </a>
+            ) : (
+              <>
+                <a
+                  href="#features"
+                  className="mt-7 w-full sm:w-auto inline-block border-2 border-primary rounded-xl px-10 py-4 font-bold hover:bg-primary transition text-center"
+                >
+                  SEE HOW IT WORKS →
+                </a>
+                <p className="text-muted-foreground text-xs tracking-[.25em] mt-4">
+                  COMING SOON TO THE APP STORE
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>

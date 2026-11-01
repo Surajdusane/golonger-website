@@ -1,294 +1,247 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import type { ReactNode } from "react";
 
-import { Footer } from "@/components/landing/footer";
-import { Header } from "@/components/landing/header";
+import {
+  BulletList,
+  ContentSection,
+  EmailLink,
+  Paragraph,
+  TextLink,
+} from "@/components/site/prose";
+import { PageShell } from "@/components/site/page-shell";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Golonger",
   description:
-    "How Golonger handles your data. No accounts, local-only health data, with RevenueCat and PostHog.",
+    "How Golonger handles information: on-device session history, optional analytics, subscriptions, and your privacy choices.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
 };
-
-function PolicySection({
-  title,
-  children,
-}: {
-  title: string;
-  children: ReactNode;
-}) {
-  return (
-    <section className="pt-12 first:pt-0">
-      <h2 className="section-heading">{title}</h2>
-      <div className="mt-4 space-y-4">{children}</div>
-    </section>
-  );
-}
-
-function Paragraph({ children }: { children: ReactNode }) {
-  return (
-    <p className="text-muted-foreground leading-relaxed">{children}</p>
-  );
-}
-
-function List({ items }: { items: ReactNode[] }) {
-  return (
-    <ul className="space-y-2.5 list-disc pl-5 text-muted-foreground leading-relaxed">
-      {items.map((item, i) => (
-        <li key={i}>{item}</li>
-      ))}
-    </ul>
-  );
-}
-
-function EmailLink() {
-  return (
-    <a
-      href="mailto:hello@golonger.app"
-      className="text-primary hover:underline"
-    >
-      hello@golonger.app
-    </a>
-  );
-}
 
 export default function PrivacyPolicyPage() {
   return (
-    <main>
-      <section className="grid-bg">
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <Header />
+    <PageShell
+      eyebrow="LEGAL"
+      title="PRIVACY POLICY"
+      meta={`LAST UPDATED: ${siteConfig.legalLastUpdated.toUpperCase()}`}
+    >
+      <ContentSection title="About us">
+        <Paragraph>
+          Golonger is a mobile app that provides guided pelvic floor exercise
+          sessions (the &ldquo;App&rdquo;). This Privacy Policy explains how
+          Golonger (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;)
+          handles information when you use the App.
+        </Paragraph>
+        <Paragraph>
+          You do not need an account to use the App. We do not operate a user
+          database, and the exercise history and session data you create stay
+          on your device unless you choose to share analytics.
+        </Paragraph>
+        <Paragraph>
+          If you do not accept this Privacy Policy, please do not use the App.
+          If you have any questions, contact us at <EmailLink />.
+        </Paragraph>
+      </ContentSection>
 
-          <div className="py-16 md:py-20 text-center">
-            <p className="text-xs tracking-[.3em] text-primary font-semibold">
-              LEGAL
-            </p>
-            <h1 className="page-title mt-3">PRIVACY POLICY</h1>
-            <p className="text-muted-foreground mt-4 text-xs tracking-[.25em]">
-              LAST UPDATED: SEPTEMBER 11, 2026
-            </p>
-          </div>
-        </div>
-      </section>
+      <ContentSection title="Information stored on your device">
+        <Paragraph>
+          Exercise history and session data - completed sessions, streaks,
+          preferences, and reminder settings - are stored locally on your device
+          and are not sent to us.
+        </Paragraph>
+        <Paragraph>
+          The optional first name you may enter during onboarding is also stored
+          locally on your device only. It is not transmitted to us or to our
+          service providers.
+        </Paragraph>
+        <Paragraph>
+          You can clear this data at any time with Settings → Delete All Data,
+          or by uninstalling the App.
+        </Paragraph>
+      </ContentSection>
 
-      <section className="py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
-          >
-            <span aria-hidden="true">←</span> Back to home
-          </Link>
+      <ContentSection title="Analytics (optional)">
+        <Paragraph>
+          Analytics is optional and is only enabled if you choose to share it in
+          Settings → Share Analytics.
+        </Paragraph>
+        <Paragraph>
+          If you enable analytics, PostHog receives pseudonymous identifiers and
+          usage events. This may include which screens you open, session start
+          and completion events, app version, device model, operating system
+          version, language, and technical information such as your IP address.
+          These events are linked to a persistent pseudonymous distinct ID
+          rather than your name or email address.
+        </Paragraph>
+        <Paragraph>
+          You can turn analytics off at any time in Settings → Share Analytics.
+          This stops new analytics events from being sent and records your
+          choice. You may withdraw consent at any time this way. Settings →
+          Delete All Data resets the analytics identifier and the consent state
+          stored on your device.
+        </Paragraph>
+      </ContentSection>
 
-          <div className="mt-8">
-            <PolicySection title="About us">
-              <Paragraph>
-                Golonger is a mobile app for guided pelvic floor exercises,
-                designed to improve pelvic floor strength and flexibility for
-                sexual health and wellness (the &ldquo;App&rdquo;). This
-                Privacy Policy explains how Golonger (&ldquo;we,&rdquo;
-                &ldquo;our,&rdquo; or &ldquo;us&rdquo;) handles information
-                when you use our App.
-              </Paragraph>
-              <Paragraph>
-                Private by design: we require no account, operate no user
-                database, and store no personal data on our own servers. Your
-                health data stays on your device. Limited subscription and
-                analytics data is processed only by the trusted third-party
-                providers described below.
-              </Paragraph>
-              <Paragraph>
-                If you do not accept the terms of this Privacy Policy, please
-                do not use the App. If you have any questions or concerns,
-                contact us at <EmailLink />.
-              </Paragraph>
-            </PolicySection>
+      <ContentSection title="Subscriptions and purchases">
+        <Paragraph>
+          Subscriptions are purchased through the Apple App Store or Google Play
+          and managed with RevenueCat. RevenueCat processes purchase history,
+          subscription status, and device identifiers needed to validate
+          entitlements and restore purchases. We do not receive or store your
+          payment card details; payments are handled by the app store.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="Data we collect">
-              <Paragraph>
-                We do not collect or store personal data like your name, email
-                address, or IP address on our own systems, and we do not
-                create user accounts or profiles.
-              </Paragraph>
-              <Paragraph>
-                Your exercise history, session data, and in-app preferences
-                are stored locally on your device only and never sent to us.
-              </Paragraph>
-              <Paragraph>
-                Certain information is collected automatically by our
-                third-party providers to operate subscriptions and improve
-                the App. This includes:
-              </Paragraph>
-              <List
-                items={[
-                  <>
-                    <strong className="text-foreground">
-                      Subscription data (via RevenueCat):
-                    </strong>{" "}
-                    purchase history, subscription status, and device
-                    identifiers needed to validate entitlements.
-                  </>,
-                  <>
-                    <strong className="text-foreground">
-                      App usage data (via PostHog):
-                    </strong>{" "}
-                    anonymized events such as time spent in the app and screen
-                    views.
-                  </>,
-                  <>
-                    <strong className="text-foreground">
-                      Device information:
-                    </strong>{" "}
-                    such as device model, OS version, and language settings,
-                    collected in anonymized form for analytics and stability.
-                  </>,
-                  <>
-                    <strong className="text-foreground">
-                      Diagnostics:
-                    </strong>{" "}
-                    crash logs via Apple&apos;s and Google&apos;s diagnostics
-                    tools to monitor performance.
-                  </>,
-                ]}
-              />
-            </PolicySection>
+      <ContentSection title="Diagnostics">
+        <Paragraph>
+          Apple and Google may provide crash logs and diagnostics depending on
+          your device settings. These are used only to diagnose crashes and keep
+          the App stable.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="How we use your data">
-              <Paragraph>
-                We ourselves do not receive or process personal data for our
-                own purposes. Our providers use the information above to:
-              </Paragraph>
-              <List
-                items={[
-                  <>validate and manage your subscription via RevenueCat;</>,
-                  <>
-                    monitor app performance and diagnose bugs or crashes;
-                  </>,
-                  <>
-                    understand general user behavior (e.g., time spent in app,
-                    screen views) via PostHog to improve the experience;
-                  </>,
-                ]}
-              />
-              <Paragraph>
-                All analytics data is anonymized and is never used for
-                advertising or sold to third parties.
-              </Paragraph>
-            </PolicySection>
+      <ContentSection title="How we use information">
+        <Paragraph>
+          We and our providers use the information described above to:
+        </Paragraph>
+        <BulletList
+          items={[
+            <>validate and manage subscriptions and restore purchases;</>,
+            <>
+              understand how the App is used, if you choose to enable
+              analytics;
+            </>,
+            <>diagnose crashes and technical problems;</>,
+            <>respond to your support requests.</>,
+          ]}
+        />
+        <Paragraph>
+          We do not use information for advertising, we do not sell it, and we
+          do not share it for targeted advertising.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="Third-party services">
-              <Paragraph>
-                We rely on the following third-party tools to operate the App:
-              </Paragraph>
-              <List
-                items={[
-                  <>
-                    <strong className="text-foreground">RevenueCat</strong> —
-                    to manage subscriptions, validate purchases, and handle
-                    entitlements.
-                  </>,
-                  <>
-                    <strong className="text-foreground">
-                      PostHog (Cloud)
-                    </strong>{" "}
-                    — for anonymized product analytics and feature usage.
-                  </>,
-                  <>
-                    <strong className="text-foreground">
-                      Apple App Store &amp; Google Play
-                    </strong>{" "}
-                    — for payments, purchase processing, and usage insights.
-                  </>,
-                ]}
-              />
-              <Paragraph>
-                These providers may collect anonymized data according to their
-                own privacy practices. No personally identifiable information
-                is intentionally transmitted to them by us beyond what is
-                strictly required to provide subscriptions and analytics. We
-                recommend reviewing the privacy policies of the providers you
-                interact with. We do not collect or process any payment
-                instrument details such as bank card numbers — those are
-                handled entirely by the app stores.
-              </Paragraph>
-            </PolicySection>
+      <ContentSection title="Third-party services">
+        <Paragraph>
+          We rely on the following providers to operate the App. Each processes
+          information under its own privacy policy.
+        </Paragraph>
+        <BulletList
+          items={[
+            <>
+              <strong className="text-foreground">RevenueCat</strong> -
+              subscription management, purchase validation, and entitlement
+              restoration.{" "}
+              <TextLink href="https://www.revenuecat.com/privacy">
+                Privacy policy
+              </TextLink>
+              .
+            </>,
+            <>
+              <strong className="text-foreground">PostHog (United States)</strong>{" "}
+              - optional product analytics.{" "}
+              <TextLink href="https://posthog.com/privacy">
+                Privacy policy
+              </TextLink>
+              .
+            </>,
+            <>
+              <strong className="text-foreground">Apple App Store</strong> -
+              payments, purchase processing, and diagnostics.{" "}
+              <TextLink href="https://www.apple.com/legal/privacy/">
+                Privacy policy
+              </TextLink>
+              .
+            </>,
+            <>
+              <strong className="text-foreground">Google Play</strong> -
+              payments, purchase processing, and diagnostics.{" "}
+              <TextLink href="https://policies.google.com/privacy">
+                Privacy policy
+              </TextLink>
+              .
+            </>,
+          ]}
+        />
+        <Paragraph>
+          We require our service providers to protect information to a standard
+          equivalent to this policy and to use it only for the purposes we
+          specify.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="Data storage">
-              <Paragraph>
-                Your health-related data — exercise history and session data —
-                is stored locally on your device only. We maintain no servers
-                holding your personal data, so there are no cross-border
-                transfers performed by us.
-              </Paragraph>
-              <Paragraph>
-                Subscription and analytics data held by RevenueCat and PostHog
-                is stored and secured by those providers under their own
-                security measures, including encryption in transit. Uninstalling
-                the App permanently deletes all locally stored data on your
-                device; data held by third-party providers is retained
-                according to their own retention policies.
-              </Paragraph>
-            </PolicySection>
+      <ContentSection title="International transfers">
+        <Paragraph>
+          PostHog is hosted in the United States. If you use the App from outside
+          the United States and choose to share analytics, your pseudonymous
+          analytics data will be transferred to and processed in the United
+          States. Where required, we rely on appropriate safeguards for these
+          transfers, such as standard contractual clauses. Subscription data may
+          be processed in the countries where RevenueCat, Apple, and Google
+          operate.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="Your privacy controls">
-              <Paragraph>
-                Since no user accounts are created, there is no user profile
-                to delete and no in-app account deletion flow.
-              </Paragraph>
-              <Paragraph>
-                To remove your on-device data, simply uninstall the App. If
-                you wish to request the deletion of analytics or subscription
-                data associated with your device held by PostHog or RevenueCat,
-                contact us at <EmailLink /> and we will forward your request
-                to the relevant provider and confirm once processed.
-              </Paragraph>
-              <Paragraph>
-                To exercise other rights — access, rectification, objection,
-                restriction, or portability — contact us at <EmailLink />. We
-                typically respond within one month. We do not sell your
-                personal information for money and do not share it for
-                targeted advertising, so there is nothing to opt out of on our
-                side.
-              </Paragraph>
-            </PolicySection>
+      <ContentSection title="Retention">
+        <Paragraph>
+          Information stored on your device remains until you delete it in
+          Settings → Delete All Data or uninstall the App. PostHog and RevenueCat
+          retain information according to their own retention policies and our
+          agreements with them. Support emails are kept only for as long as
+          needed to respond and to meet legal obligations.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="Children's privacy">
-              <Paragraph>
-                The App is a sexual health and wellness app intended for
-                adults aged 18 and older. It is not directed at children, and
-                we do not knowingly collect personal information from children
-                under the age of 13.
-              </Paragraph>
-              <Paragraph>
-                If we become aware of unintentional data collection from a
-                child, we will delete it promptly. Parents and guardians are
-                responsible for supervising any use by minors.
-              </Paragraph>
-            </PolicySection>
+      <ContentSection title="Your privacy choices and rights">
+        <Paragraph>
+          Depending on where you live, you may have rights to access, correct,
+          delete, restrict, or port your information, or to object to
+          processing. To exercise these rights, email <EmailLink />. We usually
+          respond within one month.
+        </Paragraph>
+        <Paragraph>
+          Because we do not operate accounts or a user database, most of the
+          information associated with your device is held by the app stores and
+          the providers listed above. We will forward requests to the relevant
+          provider where needed and confirm once processed.
+        </Paragraph>
+        <Paragraph>
+          You can withdraw analytics consent at any time in Settings → Share
+          Analytics. We do not sell personal information for money and do not
+          share it for targeted advertising.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="Changes to this policy">
-              <Paragraph>
-                We may update this Privacy Policy from time to time to reflect
-                changes in the law, our data practices, the features of the
-                App, or advances in technology. Any changes will be reflected
-                with a new &ldquo;Last updated&rdquo; date at the top of this
-                page. Continued use of the App after changes go into effect
-                constitutes your acceptance of the updated policy.
-              </Paragraph>
-            </PolicySection>
+      <ContentSection title="Children's privacy">
+        <Paragraph>
+          The App is intended for adults aged 18 and older. It is not directed
+          at children, and we do not knowingly collect personal information from
+          children. If you believe a child has used the App, contact us and we
+          will help remove the data.
+        </Paragraph>
+      </ContentSection>
 
-            <PolicySection title="Contact">
-              <Paragraph>
-                If you have any questions about this policy or your data,
-                reach out to us at: <EmailLink />
-              </Paragraph>
-            </PolicySection>
-          </div>
-        </div>
-      </section>
+      <ContentSection title="Changes to this policy">
+        <Paragraph>
+          We may update this Privacy Policy from time to time to reflect changes
+          in the law, our data practices, the features of the App, or advances in
+          technology. Any changes will be reflected with a new &ldquo;Last
+          updated&rdquo; date at the top of this page. Continued use of the App
+          after changes go into effect constitutes your acceptance of the
+          updated policy.
+        </Paragraph>
+      </ContentSection>
 
-      <Footer />
-    </main>
+      <ContentSection title="Contact">
+        <Paragraph>
+          If you have any questions about this policy or your data, email us at{" "}
+          <EmailLink /> or visit our <TextLink href="/contact">contact page</TextLink>.
+          You can also read our{" "}
+          <TextLink href="/terms-of-use">Terms of Use</TextLink> and{" "}
+          <TextLink href="/health-disclaimer">Health Disclaimer</TextLink>.
+        </Paragraph>
+      </ContentSection>
+    </PageShell>
   );
 }

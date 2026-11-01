@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import logo from "@/../public/logo.png";
+import { siteConfig } from "@/lib/site";
 
 export function Logo() {
   return (
@@ -22,23 +23,32 @@ export function Header() {
       <Logo />
 
       <nav className="hidden md:flex gap-10 text-sm text-muted-foreground">
-        <a href="#features" className="hover:text-foreground transition">
+        <Link href="/#features" className="hover:text-foreground transition">
           Features
-        </a>
-        <a href="#reviews" className="hover:text-foreground transition">
-          Reviews
-        </a>
-        <a href="#download" className="hover:text-foreground transition">
-          Download
-        </a>
+        </Link>
+        <Link href="/#how-it-works" className="hover:text-foreground transition">
+          How it works
+        </Link>
+        <Link href="/contact" className="hover:text-foreground transition">
+          Contact
+        </Link>
       </nav>
 
-      <a
-        href="#download"
-        className="border border-border rounded-xl px-4 md:px-6 py-2.5 md:py-3 text-sm hover:bg-white/5 transition"
-      >
-        Get the app
-      </a>
+      {siteConfig.appStoreUrl ? (
+        <a
+          href={siteConfig.appStoreUrl}
+          className="border border-border rounded-xl px-4 md:px-6 py-2.5 md:py-3 text-sm hover:bg-white/5 transition"
+        >
+          Get the app
+        </a>
+      ) : (
+        <Link
+          href="/contact"
+          className="border border-border rounded-xl px-4 md:px-6 py-2.5 md:py-3 text-sm hover:bg-white/5 transition"
+        >
+          Contact us
+        </Link>
+      )}
     </header>
   );
 }
