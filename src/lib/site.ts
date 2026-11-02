@@ -9,7 +9,7 @@ export const siteConfig = {
    */
   appStoreUrl: null as string | null,
   playStoreUrl: null as string | null,
-  legalLastUpdated: "November 1, 2026",
+  legalLastUpdated: "November 2, 2026",
   responseTime: "usually within two business days",
   companyCountry: "India",
 } as const;

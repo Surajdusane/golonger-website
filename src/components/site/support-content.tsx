@@ -61,12 +61,11 @@ const privacyFaqs: Faq[] = [
     answer: (
       <>
         We do not operate a user database, and your session data stays on your
-        device unless you choose to share analytics. If you enable analytics,
-        PostHog receives pseudonymous identifiers and usage events, which may
-        include which screens you open, session start and completion events, app
-        version, device model, operating system version, language, and technical
-        information such as your IP address. These events are linked to a
-        pseudonymous ID rather than your name or email address. See our{" "}
+        device. PostHog receives pseudonymous identifiers and usage events, which
+        may include which screens you open, session start and completion events,
+        app version, device model, operating system version, language, and
+        technical information such as your IP address. These events are linked to
+        a pseudonymous ID rather than your name or email address. See our{" "}
         <TextLink href="/privacy-policy">Privacy Policy</TextLink> for details.
       </>
     ),
@@ -74,7 +73,7 @@ const privacyFaqs: Faq[] = [
   {
     question: "Can I turn off analytics?",
     answer:
-      "Yes. Analytics is optional and only runs if you choose to share it. You can turn it off at any time in Settings, then Share Analytics. This stops new analytics events and records your choice. Settings, then Delete All Data also resets the analytics identifier and consent setting on your device.",
+      "Analytics is on by default and helps us improve the app. It never includes your name, email, or onboarding answers. To opt out and have your analytics data deleted, email support@golonger.app.",
   },
   {
     question: "Does Golonger sell or share my data?",
@@ -82,7 +81,7 @@ const privacyFaqs: Faq[] = [
       <>
         No. We do not sell your information, use it for advertising, or share it
         for targeted advertising. We use limited service providers only to run
-        the app: RevenueCat for subscriptions, PostHog for optional analytics,
+        the app: RevenueCat for subscriptions, PostHog for analytics,
         and Apple or Google for payments and diagnostics. Each processes
         information under its own privacy policy, listed in our{" "}
         <TextLink href="/privacy-policy">Privacy Policy</TextLink>.
@@ -92,16 +91,15 @@ const privacyFaqs: Faq[] = [
   {
     question: "How do I delete my data?",
     answer:
-      "Open the app and go to Settings, then Delete All Data. This clears your local session history, streaks, and preferences, and resets the analytics identifier and consent setting on your device. Uninstalling the app also permanently deletes locally stored data. To ask about information held by our providers, email us.",
+      "Open the app and go to Settings, then Delete All Data. This clears your local session history, streaks, and preferences, and resets the analytics identifier on your device. Uninstalling the app also permanently deletes locally stored data. To ask about information held by our providers, email us.",
   },
   {
     question: "Is my data transferred outside my country?",
     answer: (
       <>
-        PostHog is hosted in the United States, so if you enable analytics your
-        pseudonymous analytics data is transferred to and processed there.
-        Subscription data may be processed in the countries where RevenueCat,
-        Apple, and Google operate. Where required, we rely on appropriate
+        PostHog is hosted in the United States, so your pseudonymous analytics
+        data is transferred to and processed there. Subscription data may be
+        processed in the countries where RevenueCat, Apple, and Google operate. Where required, we rely on appropriate
         safeguards for these transfers. See the{" "}
         <TextLink href="/privacy-policy">Privacy Policy</TextLink> for more.
       </>

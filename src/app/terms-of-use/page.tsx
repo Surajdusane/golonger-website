@@ -156,7 +156,8 @@ export default function TermsOfUsePage() {
             <>
               <strong className="text-foreground">PostHog (United States)</strong>{" "}
               - pseudonymous product analytics related to app usage and
-              behavior, if you choose to enable analytics.
+              behavior. Analytics is enabled by default, as described in the
+              Privacy Policy.
             </>,
             <>
               <strong className="text-foreground">

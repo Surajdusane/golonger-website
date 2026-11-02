@@ -13,7 +13,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy - Golonger",
   description:
-    "How Golonger handles information: on-device session history, optional analytics, subscriptions, and your privacy choices.",
+    "How Golonger handles information: on-device session history, analytics, subscriptions, and your privacy choices.",
   alternates: {
     canonical: "/privacy-policy",
   },
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
         <Paragraph>
           You do not need an account to use the App. We do not operate a user
           database, and the exercise history and session data you create stay
-          on your device unless you choose to share analytics.
+          on your device.
         </Paragraph>
         <Paragraph>
           If you do not accept this Privacy Policy, please do not use the App.
@@ -61,25 +61,18 @@ export default function PrivacyPolicyPage() {
         </Paragraph>
       </ContentSection>
 
-      <ContentSection title="Analytics (optional)">
+      <ContentSection title="Analytics">
         <Paragraph>
-          Analytics is optional and is only enabled if you choose to share it in
-          Settings → Share Analytics.
-        </Paragraph>
-        <Paragraph>
-          If you enable analytics, PostHog receives pseudonymous identifiers and
-          usage events. This may include which screens you open, session start
-          and completion events, app version, device model, operating system
-          version, language, and technical information such as your IP address.
-          These events are linked to a persistent pseudonymous distinct ID
-          rather than your name or email address.
-        </Paragraph>
-        <Paragraph>
-          You can turn analytics off at any time in Settings → Share Analytics.
-          This stops new analytics events from being sent and records your
-          choice. You may withdraw consent at any time this way. Settings →
-          Delete All Data resets the analytics identifier and the consent state
-          stored on your device.
+          The app uses PostHog to understand how features are used and to fix
+          problems. Analytics is enabled by default. We collect a randomly
+          generated analytics identifier, the screens you open, session and
+          exercise completion events, app version, device model, operating
+          system version, language, and your IP address. We do not collect your
+          name, email address, or your answers to onboarding questions. Analytics
+          data is processed by PostHog, Inc. in the United States under standard
+          contractual clauses and retained for up to 12 months. You can request
+          that we stop processing your analytics data and delete it by emailing
+          support@golonger.app.
         </Paragraph>
       </ContentSection>
 
@@ -109,8 +102,7 @@ export default function PrivacyPolicyPage() {
           items={[
             <>validate and manage subscriptions and restore purchases;</>,
             <>
-              understand how the App is used, if you choose to enable
-              analytics;
+              understand how the App is used;
             </>,
             <>diagnose crashes and technical problems;</>,
             <>respond to your support requests.</>,
@@ -140,7 +132,7 @@ export default function PrivacyPolicyPage() {
             </>,
             <>
               <strong className="text-foreground">PostHog (United States)</strong>{" "}
-              - optional product analytics.{" "}
+              - product analytics.{" "}
               <TextLink href="https://posthog.com/privacy">
                 Privacy policy
               </TextLink>
@@ -174,9 +166,9 @@ export default function PrivacyPolicyPage() {
       <ContentSection title="International transfers">
         <Paragraph>
           PostHog is hosted in the United States. If you use the App from outside
-          the United States and choose to share analytics, your pseudonymous
-          analytics data will be transferred to and processed in the United
-          States. Where required, we rely on appropriate safeguards for these
+          the United States, your pseudonymous analytics data will be transferred
+          to and processed in the United States. Where required, we rely on
+          appropriate safeguards for these
           transfers, such as standard contractual clauses. Subscription data may
           be processed in the countries where RevenueCat, Apple, and Google
           operate.
@@ -207,9 +199,8 @@ export default function PrivacyPolicyPage() {
           provider where needed and confirm once processed.
         </Paragraph>
         <Paragraph>
-          You can withdraw analytics consent at any time in Settings → Share
-          Analytics. We do not sell personal information for money and do not
-          share it for targeted advertising.
+          We do not sell personal information for money and do not share it for
+          targeted advertising.
         </Paragraph>
       </ContentSection>
 
