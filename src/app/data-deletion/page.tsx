@@ -78,7 +78,7 @@ export default function DataDeletionPage() {
         <Paragraph>
           Email <EmailLink /> with the subject line{" "}
           <strong className="text-foreground">
-            &ldquo;Data Deletion Request — GoLonger&rdquo;
+            &ldquo;Data Deletion Request - GoLonger&rdquo;
           </strong>
           , and include:
         </Paragraph>

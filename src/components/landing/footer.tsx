@@ -58,7 +58,7 @@ function StoreBadge({
           <span className="block text-[9px] text-muted-foreground">
             {caption}
           </span>
-          <span className="block text-xs font-bold">{store} — Coming soon</span>
+          <span className="block text-xs font-bold">{store} - Coming soon</span>
         </span>
       </span>
     );

@@ -27,13 +27,13 @@ The static export is written to `out/`.
 
 ## Routes
 
-- `/` — marketing home
-- `/support` — canonical help centre and FAQ (`/help` and `/faq` 301 to it)
-- `/contact` — support email and company details
-- `/data-deletion` — how to delete local data and request analytics deletion
-- `/health-disclaimer` — health and safety information
-- `/privacy-policy` — privacy policy
-- `/terms-of-use` — terms of use, including Apple App Store additional terms
+- `/` - marketing home
+- `/support` - canonical help centre and FAQ (`/help` and `/faq` 301 to it)
+- `/contact` - support email and company details
+- `/data-deletion` - how to delete local data and request analytics deletion
+- `/health-disclaimer` - health and safety information
+- `/privacy-policy` - privacy policy
+- `/terms-of-use` - terms of use, including Apple App Store additional terms
 
 ## Configuration
 

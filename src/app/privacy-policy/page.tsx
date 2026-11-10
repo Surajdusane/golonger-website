@@ -212,7 +212,7 @@ export default function PrivacyPolicyPage() {
         <BulletList
           items={[
             <>
-              <strong className="text-foreground">RevenueCat</strong> —
+              <strong className="text-foreground">RevenueCat</strong> -
               subscription management, purchase validation, and entitlement
               restoration.{" "}
               <TextLink href="https://www.revenuecat.com/privacy">
@@ -222,14 +222,14 @@ export default function PrivacyPolicyPage() {
             </>,
             <>
               <strong className="text-foreground">PostHog (United States)</strong>{" "}
-              — product analytics.{" "}
+              - product analytics.{" "}
               <TextLink href="https://posthog.com/privacy">
                 PostHog privacy policy
               </TextLink>
               .
             </>,
             <>
-              <strong className="text-foreground">Apple App Store</strong> —
+              <strong className="text-foreground">Apple App Store</strong> -
               payments, purchase processing, and store diagnostics.{" "}
               <TextLink href="https://www.apple.com/legal/privacy/">
                 Apple privacy policy
@@ -237,7 +237,7 @@ export default function PrivacyPolicyPage() {
               .
             </>,
             <>
-              <strong className="text-foreground">Google Play</strong> —
+              <strong className="text-foreground">Google Play</strong> -
               payments, purchase processing, and store diagnostics.{" "}
               <TextLink href="https://policies.google.com/privacy">
                 Google privacy policy

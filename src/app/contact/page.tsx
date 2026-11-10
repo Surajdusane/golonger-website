@@ -46,7 +46,7 @@ export default function ContactPage() {
         <BulletList
           items={[
             <>
-              <strong className="text-foreground">App support</strong> — bugs or
+              <strong className="text-foreground">App support</strong> - bugs or
               questions about the app. Please include your app version, device
               model, and operating system version.
             </>,
@@ -54,17 +54,17 @@ export default function ContactPage() {
               <strong className="text-foreground">
                 Subscriptions and billing
               </strong>{" "}
-              — restore purchases, billing questions, and cancellation. Refunds
+              - restore purchases, billing questions, and cancellation. Refunds
               are handled by the store you purchased from.
             </>,
             <>
-              <strong className="text-foreground">Privacy and data</strong> —
+              <strong className="text-foreground">Privacy and data</strong> -
               deletion requests and analytics questions. See{" "}
               <TextLink href="/data-deletion">Data Deletion</TextLink> for what to
               include.
             </>,
             <>
-              <strong className="text-foreground">Legal</strong> — questions
+              <strong className="text-foreground">Legal</strong> - questions
               about our Privacy Policy, Terms of Use, or Health Disclaimer.
             </>,
           ]}
@@ -116,11 +116,11 @@ export default function ContactPage() {
         <BulletList
           items={[
             <>
-              <TextLink href="/support">Help &amp; FAQ</TextLink> — common
+              <TextLink href="/support">Help &amp; FAQ</TextLink> - common
               questions about subscriptions, privacy, and the app.
             </>,
             <>
-              <TextLink href="/data-deletion">Data Deletion</TextLink> — how to
+              <TextLink href="/data-deletion">Data Deletion</TextLink> - how to
               delete local data and request analytics deletion.
             </>,
 

@@ -161,17 +161,17 @@ export default function TermsOfUsePage() {
         <BulletList
           items={[
             <>
-              <strong className="text-foreground">RevenueCat</strong> —
+              <strong className="text-foreground">RevenueCat</strong> -
               subscription management, purchase validation, and entitlement
               restoration.
             </>,
             <>
               <strong className="text-foreground">PostHog (United States)</strong>{" "}
-              — product analytics, as described in our Privacy Policy.
+              - product analytics, as described in our Privacy Policy.
             </>,
             <>
               <strong className="text-foreground">Apple App Store</strong> and{" "}
-              <strong className="text-foreground">Google Play</strong> —
+              <strong className="text-foreground">Google Play</strong> -
               payments, purchase records, and store diagnostics.
             </>,
           ]}
@@ -228,9 +228,9 @@ export default function TermsOfUsePage() {
           personal, non-commercial use, subject to these Terms.
         </Paragraph>
         <Paragraph>
-          All rights, title, and interest in and to the App — including text,
+          All rights, title, and interest in and to the App - including text,
           images, audio, video, software, code, visual interfaces, graphics, and
-          design — belong to GoLonger or its licensors. You may not use our name,
+          design - belong to GoLonger or its licensors. You may not use our name,
           trademarks, logos, or domain names without our prior written
           permission.
         </Paragraph>

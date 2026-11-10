@@ -18,7 +18,7 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
 });
 
-const title = "GoLonger — Guided Pelvic Floor Exercise App";
+const title = "GoLonger - Guided Pelvic Floor Exercise App";
 const description =
   "Guided pelvic floor exercise sessions with follow-along video, timers, cues, and optional reminders. No account required. 18+.";
 
