@@ -1,11 +1,13 @@
-import { Apple, Play } from "lucide-react";
+import Link from "next/link";
 
-import { siteConfig } from "@/lib/site";
-import { Logo } from "./header";
+import StoreIcon from "@/components/site/store-icon";
+import { copyrightLine, siteConfig } from "@/lib/site";
+
+import { Logo } from "./logo";
 
 const columns: Array<{
   title: string;
-  links: Array<{ label: string; href: string }>;
+  links: Array<{ label: string; href: string; external?: boolean }>;
 }> = [
   {
     title: "Product",
@@ -19,6 +21,7 @@ const columns: Array<{
     links: [
       { label: "Contact", href: "/contact" },
       { label: "Help & FAQ", href: "/support" },
+      { label: "Data Deletion", href: "/data-deletion" },
       { label: "Email us", href: siteConfig.supportMailto },
     ],
   },
@@ -28,83 +31,119 @@ const columns: Array<{
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Use", href: "/terms-of-use" },
       { label: "Health Disclaimer", href: "/health-disclaimer" },
+      { label: "Data Deletion", href: "/data-deletion" },
     ],
   },
 ];
 
+function StoreBadge({
+  href,
+  icon,
+  caption,
+  store,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  caption: string;
+  store: string;
+}) {
+  if (!href) {
+    return (
+      <span
+        aria-disabled="true"
+        className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-left opacity-70"
+      >
+        {icon}
+        <span className="leading-tight">
+          <span className="block text-[9px] text-muted-foreground">
+            {caption}
+          </span>
+          <span className="block text-xs font-bold">{store} — Coming soon</span>
+        </span>
+      </span>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    >
+      {icon}
+      <span className="text-left leading-tight">
+        <span className="block text-[9px] text-muted-foreground">{caption}</span>
+        <span className="block text-xs font-bold">{store}</span>
+      </span>
+    </a>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Logo />
-            <p className="text-muted-foreground text-sm leading-relaxed mt-4 max-w-xs">
-              Guided pelvic floor exercise sessions. No account required.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+              Guided pelvic floor exercise sessions with follow-along video,
+              timers, and optional reminders. No account required. 18+.
             </p>
 
-            {siteConfig.appStoreUrl || siteConfig.playStoreUrl ? (
-              <div className="flex flex-wrap gap-3 mt-6">
-                {siteConfig.appStoreUrl ? (
-                  <a
-                    href={siteConfig.appStoreUrl}
-                    className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-3 hover:bg-white/5 transition"
-                  >
-                    <Apple className="size-4 fill-current" />
-                    <span className="text-left leading-tight">
-                      <span className="block text-[9px] text-muted-foreground">
-                        Download on the
-                      </span>
-                      <span className="block text-xs font-bold">App Store</span>
-                    </span>
-                  </a>
-                ) : null}
-                {siteConfig.playStoreUrl ? (
-                  <a
-                    href={siteConfig.playStoreUrl}
-                    className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-3 hover:bg-white/5 transition"
-                  >
-                    <Play className="size-4 fill-current" />
-                    <span className="text-left leading-tight">
-                      <span className="block text-[9px] text-muted-foreground">
-                        Get it on
-                      </span>
-                      <span className="block text-xs font-bold">Google Play</span>
-                    </span>
-                  </a>
-                ) : null}
-              </div>
-            ) : (
-              <p className="mt-6 text-xs tracking-[.25em] text-muted-foreground">
-                COMING SOON TO THE APP STORE
-              </p>
-            )}
+            <div className="mt-6 flex flex-wrap gap-3">
+              <StoreBadge
+                href={siteConfig.appStoreUrl}
+                caption="Download on the"
+                store="App Store"
+                icon={<StoreIcon type="appstore" size={16} />}
+              />
+              <StoreBadge
+                href={siteConfig.googlePlayUrl}
+                caption="Get it on"
+                store="Google Play"
+                icon={<StoreIcon type="playstore" size={16} />}
+              />
+            </div>
           </div>
 
           {columns.map((column) => (
-            <div key={column.title}>
-              <h3 className="text-xs tracking-[.25em] text-muted-foreground font-semibold">
+            <nav key={column.title} aria-label={column.title}>
+              <h2 className="text-xs font-semibold tracking-[.25em] text-muted-foreground">
                 {column.title.toUpperCase()}
-              </h3>
+              </h2>
               <ul className="mt-4 space-y-3 text-sm">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-foreground/80 hover:text-foreground transition"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith("/") ? (
+                      <Link
+                        href={link.href}
+                        className="rounded-md text-foreground/80 transition hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="rounded-md text-foreground/80 transition hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
         </div>
 
-        <div className="mt-14 pt-6 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-sm text-muted-foreground">
-          <p>© 2026 Golonger. All rights reserved.</p>
-          <p>Guided pelvic floor training, in your pocket.</p>
+        <div className="mt-14 flex flex-col justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground md:flex-row">
+          <p>{copyrightLine}</p>
+          <p>
+            {siteConfig.siteName} is a wellness and fitness app, not medical
+            advice.
+          </p>
         </div>
       </div>
     </footer>

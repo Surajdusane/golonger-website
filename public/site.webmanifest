@@ -1,6 +1,7 @@
 {
-  "name": "Golonger",
-  "short_name": "Golonger",
+  "name": "GoLonger",
+  "short_name": "GoLonger",
+  "description": "Guided pelvic floor exercise sessions with follow-along video, timers, and optional reminders.",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

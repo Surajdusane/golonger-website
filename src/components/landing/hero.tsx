@@ -1,15 +1,15 @@
 import Image from "next/image";
 
-import heroImage from "@/../public/hero-image.png";
+import heroImage from "@/../public/hero-image.webp";
+import StoreIcon from "@/components/site/store-icon";
 import { siteConfig } from "@/lib/site";
-import { Header } from "./header";
+
+const storeLink = siteConfig.appStoreUrl || siteConfig.googlePlayUrl;
 
 export function Hero() {
   return (
-    <section id="top" className="grid-bg min-h-screen relative">
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <Header />
-
+    <section id="top" className="grid-bg relative min-h-screen">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-24 md:pt-28">
         <div className="grid lg:grid-cols-2 gap-10 items-center py-6 md:py-8">
           <div className="order-2 lg:order-1 flex justify-center">
             <Image
@@ -34,11 +34,15 @@ export function Hero() {
               home. No account required.
             </p>
 
-            {siteConfig.appStoreUrl ? (
+            {storeLink ? (
               <a
-                href={siteConfig.appStoreUrl}
-                className="mt-7 w-full sm:w-auto inline-block border-2 border-primary rounded-xl px-10 py-4 font-bold hover:bg-primary transition text-center"
+                href={storeLink}
+                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-primary px-10 py-4 text-center font-bold transition hover:bg-primary sm:w-auto"
               >
+                <StoreIcon
+                  type={siteConfig.appStoreUrl ? "appstore" : "playstore"}
+                  size={20}
+                />
                 DOWNLOAD NOW
               </a>
             ) : (

@@ -1,0 +1,9 @@
+# Canonical help page. Keep these as permanent redirects so old links and
+# search results do not break or duplicate /support.
+/help /support 301
+/help/ /support 301
+/faq /support 301
+/faq/ /support 301
+
+# Serve the canonical apex domain.
+https://www.golonger.app/* https://golonger.app/:splat 301

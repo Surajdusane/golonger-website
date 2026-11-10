@@ -56,8 +56,8 @@
   --card-foreground: #ffffff;
   --popover: #1a1a1e;
   --popover-foreground: #f2f2f7;
-  --primary: #876c9a;
-  --primary-foreground: #ffffff;
+  --primary: #a98bbd;
+  --primary-foreground: #101012;
   --secondary: #1a1a1e;
   --secondary-foreground: #f2f2f7;
   --muted: #2a2a30;
@@ -67,8 +67,8 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: #2a2a30;
   --input: #2a2a30;
-  --ring: #876c9a;
-  --chart-1: #876c9a;
+  --ring: #a98bbd;
+  --chart-1: #a98bbd;
   --chart-2: #b7a8ff;
   --chart-3: #d8c98f;
   --chart-4: #8e8e93;
@@ -76,12 +76,12 @@
   --radius: 0.625rem;
   --sidebar: #1a1a1e;
   --sidebar-foreground: #f2f2f7;
-  --sidebar-primary: #876c9a;
+  --sidebar-primary: #a98bbd;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #2a2a30;
   --sidebar-accent-foreground: #f2f2f7;
   --sidebar-border: #2a2a30;
-  --sidebar-ring: #876c9a;
+  --sidebar-ring: #a98bbd;
 }
 
 .dark {
@@ -91,8 +91,8 @@
   --card-foreground: #ffffff;
   --popover: #1a1a1e;
   --popover-foreground: #f2f2f7;
-  --primary: #876c9a;
-  --primary-foreground: #ffffff;
+  --primary: #a98bbd;
+  --primary-foreground: #101012;
   --secondary: #1a1a1e;
   --secondary-foreground: #f2f2f7;
   --muted: #2a2a30;
@@ -102,20 +102,20 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: #2a2a30;
   --input: #2a2a30;
-  --ring: #876c9a;
-  --chart-1: #876c9a;
+  --ring: #a98bbd;
+  --chart-1: #a98bbd;
   --chart-2: #b7a8ff;
   --chart-3: #d8c98f;
   --chart-4: #8e8e93;
   --chart-5: #5a4a68;
   --sidebar: #1a1a1e;
   --sidebar-foreground: #f2f2f7;
-  --sidebar-primary: #876c9a;
+  --sidebar-primary: #a98bbd;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #2a2a30;
   --sidebar-accent-foreground: #f2f2f7;
   --sidebar-border: #2a2a30;
-  --sidebar-ring: #876c9a;
+  --sidebar-ring: #a98bbd;
 }
 
 @layer base {
@@ -130,14 +130,43 @@
     scroll-behavior: smooth;
   }
 
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
   }
 }
 
 @layer components {
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 100;
+    border-radius: 0.5rem;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
   /* Vignette grid backdrop */
   .grid-bg {
     position: relative;
@@ -169,7 +198,7 @@
   /* Display type */
   .hero-title {
     font-family: "BebasNeue-Regular", var(--font-heading), sans-serif;
-    font-size: 100px;
+    font-size: clamp(3.25rem, 9vw, 6.25rem);
     font-weight: 700;
     line-height: 0.88;
     letter-spacing: 1px;
@@ -177,7 +206,7 @@
 
   .page-title {
     font-family: "BebasNeue-Regular", var(--font-heading), sans-serif;
-    font-size: 80px;
+    font-size: clamp(2.25rem, 7vw, 5rem);
     font-weight: 700;
     line-height: 0.9;
     letter-spacing: 1px;
@@ -189,15 +218,5 @@
     font-weight: 700;
     line-height: 1;
     letter-spacing: 1px;
-  }
-
-  @media (max-width: 767px) {
-    .hero-title {
-      font-size: 60px;
-    }
-
-    .page-title {
-      font-size: 44px;
-    }
   }
 }

@@ -44,7 +44,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="relative py-24 md:py-28">
+    <section id="features" className="relative scroll-mt-24 py-24 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-xs tracking-[.3em] text-primary font-semibold">

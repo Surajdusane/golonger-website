@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
+
 import "./globals.css";
-import Providers from "@/provider";
+import { Footer } from "@/components/landing/footer";
+import { Header } from "@/components/landing/header";
 import { siteConfig } from "@/lib/site";
+import Providers from "@/provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,15 +18,18 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
 });
 
-const title = "Golonger - Guided Pelvic Floor Exercise App";
+const title = "GoLonger — Guided Pelvic Floor Exercise App";
 const description =
-  "Guided pelvic floor exercise sessions with video, timers, and reminders. No account required.";
+  "Guided pelvic floor exercise sessions with follow-along video, timers, cues, and optional reminders. No account required. 18+.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title,
+  title: {
+    default: title,
+    template: `%s | ${siteConfig.siteName}`,
+  },
   description,
-  applicationName: siteConfig.name,
+  applicationName: siteConfig.siteName,
   icons: {
     icon: [
       { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
@@ -40,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteConfig.url,
-    siteName: siteConfig.name,
+    siteName: siteConfig.siteName,
     title,
     description,
     images: [
@@ -48,7 +54,7 @@ export const metadata: Metadata = {
         url: "/web-app-manifest-512x512.png",
         width: 512,
         height: 512,
-        alt: "Golonger app icon",
+        alt: "GoLonger app icon",
       },
     ],
   },
@@ -60,6 +66,28 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.legalEntity,
+  alternateName: siteConfig.siteName,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/web-app-manifest-512x512.png`,
+  email: siteConfig.supportEmail,
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: siteConfig.supportEmail,
+      availableLanguage: ["English"],
+    },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "IN",
+  },
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -68,7 +96,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <Providers>{children}</Providers>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <Providers>
+          <Header />
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
+        <script
+          type="application/ld+json"
+          // JSON-LD is generated from trusted constants, not user input.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </body>
     </html>
   );

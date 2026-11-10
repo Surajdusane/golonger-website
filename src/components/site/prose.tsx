@@ -18,13 +18,17 @@ export function ContentSection({
   );
 }
 
+export function SubHeading({ children }: { children: ReactNode }) {
+  return <h3 className="pt-2 font-semibold text-foreground">{children}</h3>;
+}
+
 export function Paragraph({ children }: { children: ReactNode }) {
-  return <p className="text-muted-foreground leading-relaxed">{children}</p>;
+  return <p className="leading-relaxed text-muted-foreground">{children}</p>;
 }
 
 export function BulletList({ items }: { items: ReactNode[] }) {
   return (
-    <ul className="space-y-2.5 list-disc pl-5 text-muted-foreground leading-relaxed">
+    <ul className="list-disc space-y-2.5 pl-5 leading-relaxed text-muted-foreground">
       {items.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
@@ -39,7 +43,8 @@ export function TextLink({
   href: string;
   children: ReactNode;
 }) {
-  const className = "text-primary hover:underline";
+  const className =
+    "text-primary underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
   if (href.startsWith("/")) {
     return (
@@ -50,12 +55,7 @@ export function TextLink({
   }
 
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className={className}
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
     </a>
   );
@@ -63,7 +63,10 @@ export function TextLink({
 
 export function EmailLink() {
   return (
-    <a href={siteConfig.supportMailto} className="text-primary hover:underline">
+    <a
+      href={siteConfig.supportMailto}
+      className="break-all text-primary underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    >
       {siteConfig.supportEmail}
     </a>
   );

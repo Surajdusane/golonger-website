@@ -1,54 +1,77 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-import logo from "@/../public/logo.png";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+import StoreIcon from "@/components/site/store-icon";
 import { siteConfig } from "@/lib/site";
 
-export function Logo() {
-  return (
-    <Link href="/" className="flex items-center gap-2.5">
-      <Image
-        src={logo}
-        alt="Golonger logo"
-        className="w-8 h-8 object-cover"
-      />
-      <span className="font-extrabold text-xl tracking-wide">GOLONGER</span>
-    </Link>
-  );
-}
+import { Logo } from "./logo";
+
+const navItems = [
+  { href: "/#features", label: "Features" },
+  { href: "/#how-it-works", label: "How it works" },
+  { href: "/contact", label: "Contact" },
+];
+
+const storeLink = siteConfig.appStoreUrl || siteConfig.googlePlayUrl;
 
 export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="h-20 flex items-center justify-between">
-      <Logo />
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled
+          ? "border-b border-border/60 bg-background/80 backdrop-blur-md"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <Logo />
 
-      <nav className="hidden md:flex gap-10 text-sm text-muted-foreground">
-        <Link href="/#features" className="hover:text-foreground transition">
-          Features
-        </Link>
-        <Link href="/#how-it-works" className="hover:text-foreground transition">
-          How it works
-        </Link>
-        <Link href="/contact" className="hover:text-foreground transition">
-          Contact
-        </Link>
-      </nav>
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-10 text-sm text-muted-foreground md:flex"
+        >
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-md transition hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
-      {siteConfig.appStoreUrl ? (
-        <a
-          href={siteConfig.appStoreUrl}
-          className="border border-border rounded-xl px-4 md:px-6 py-2.5 md:py-3 text-sm hover:bg-white/5 transition"
-        >
-          Get the app
-        </a>
-      ) : (
-        <Link
-          href="/contact"
-          className="border border-border rounded-xl px-4 md:px-6 py-2.5 md:py-3 text-sm hover:bg-white/5 transition"
-        >
-          Contact us
-        </Link>
-      )}
+        {storeLink ? (
+          <a
+            href={storeLink}
+            className="inline-flex items-center gap-2 rounded-xl border border-border px-4 py-2.5 text-sm transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:px-6 md:py-3"
+          >
+            <StoreIcon
+              type={siteConfig.appStoreUrl ? "appstore" : "playstore"}
+              size={16}
+            />
+            Get the app
+          </a>
+        ) : (
+          <Link
+            href="/contact"
+            className="rounded-xl border border-border px-4 py-2.5 text-sm transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:px-6 md:py-3"
+          >
+            Contact us
+          </Link>
+        )}
+      </div>
     </header>
   );
 }
