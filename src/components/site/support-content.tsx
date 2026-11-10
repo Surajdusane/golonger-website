@@ -61,14 +61,17 @@ const privacyFaqs: Faq[] = [
     answer: (
       <>
         We do not operate a user database, and your exercise history stays on
-        your device. The app currently sends screen-view analytics to PostHog in
-        the United States. Those events may include the name of the screen you
-        opened, and PostHog may also receive a pseudonymous analytics identifier,
-        app version and build, app name and bundle ID, device manufacturer and
-        model, OS name and version, locale, timezone, an emulator flag, and your
-        IP address. The app does not send your name, email, onboarding answers,
-        exercise history, reps, holds, or completion data, and does not collect
-        precise location, IDFA, or HealthKit data. See our{" "}
+        your device. The app currently sends limited product analytics to
+        PostHog in the United States: onboarding page views, feature usage
+        (Home, Analytics, Exercise, or Kegle), and one app-open event per day.
+        Those events may include the name of the onboarding page or feature you
+        opened and the local date of the daily event, and PostHog may also
+        receive a pseudonymous analytics identifier, app version and build, app
+        name and bundle ID, device manufacturer and model, OS name and version,
+        locale, timezone, an emulator flag, and your IP address. The app does not
+        send your name, email, onboarding answers, exercise history, reps,
+        holds, or completion data, and does not collect precise location, IDFA,
+        or HealthKit data. See our{" "}
         <TextLink href="/privacy-policy">Privacy Policy</TextLink> for details.
       </>
     ),

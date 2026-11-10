@@ -37,10 +37,10 @@ export const siteConfig = {
    * TODO: confirm the actual PostHog project data-retention setting. Do not
    * replace with "up to 12 months" unless that is the configured value.
    */
-  analyticsRetention: "[RETENTION_PERIOD]",
+  analyticsRetention: "1 year",
 
   responseTime: "usually within two business days",
-  rightsResponseTime: "usually within one month",
+  rightsResponseTime: "usually respond within one month",
 
   appStoreBillingUrl: "https://support.apple.com/billing",
   googlePlayRefundUrl:

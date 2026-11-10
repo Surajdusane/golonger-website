@@ -15,7 +15,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = createMetadata({
   title: "Privacy Policy",
   description:
-    "How GoLonger handles information: on-device exercise data, PostHog screen-view analytics, RevenueCat subscriptions, retention, and your privacy choices.",
+    "How GoLonger handles information: on-device exercise data, limited PostHog product analytics, RevenueCat subscriptions, retention, and your privacy choices.",
   path: "/privacy-policy",
 });
 
@@ -100,14 +100,26 @@ export default function PrivacyPolicyPage() {
         </Paragraph>
         <SubHeading>What analytics collects</SubHeading>
         <Paragraph>
-          The current version of the App sends screen-view events only. Those
-          events may include the name of the screen you opened. PostHog may
-          receive:
+          The current version of the App sends three kinds of analytics events:
+          an onboarding page-view event when you open a page during onboarding,
+          a feature-usage event when you open one of the main feature areas
+          (Home, Analytics, Exercise, or Kegle), and one app-open event per day.
+          These events may include the name of the onboarding page or feature
+          you opened, and the local date of the daily app-open event. PostHog
+          may receive:
         </Paragraph>
         <BulletList
           items={[
             <>a pseudonymous analytics identifier generated for your installation;</>,
-            <>screen-view events, which may include the name of the screen you opened;</>,
+            <>
+              onboarding page-view events, which may include the name of the
+              onboarding page you opened;
+            </>,
+            <>
+              feature-usage events naming the feature you opened (Home,
+              Analytics, Exercise, or Kegle);
+            </>,
+            <>one app-open event per day, which includes the local date;</>,
             <>app version and build number;</>,
             <>app name and bundle identifier;</>,
             <>device manufacturer and model;</>,
@@ -123,8 +135,8 @@ export default function PrivacyPolicyPage() {
           to PostHog. It does not send your exercise history, reps, holds, or
           completion data. It does not collect precise location, the advertising
           identifier (IDFA), or HealthKit data. The current version does not
-          record touches or session replays, and does not send app lifecycle
-          events.
+          record touches or session replays. Apart from the once-daily app-open
+          event described above, it does not send app lifecycle events.
         </Paragraph>
         <Paragraph>
           We do not use analytics for advertising, we do not sell analytics

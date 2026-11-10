@@ -71,9 +71,10 @@ export default function DataDeletionPage() {
 
       <ContentSection title="Request deletion of analytics data">
         <Paragraph>
-          The current version of the app sends screen-view analytics to PostHog
-          in the United States. You can email us to request deletion of analytics
-          data associated with your installation.
+          The current version of the app sends limited product analytics to
+          PostHog in the United States: onboarding page views, feature usage,
+          and one app-open event per day. You can email us to request deletion
+          of analytics data associated with your installation.
         </Paragraph>
         <Paragraph>
           Email <EmailLink /> with the subject line{" "}
